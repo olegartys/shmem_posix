@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 	for (int i = 0; i < MB; ++i)
 		*((char*)membase+i) = 13;
 	
-	qmunmap(membase, 1*MB);
+	munmap(membase, 1*MB);
 	//shm_unlink("/test.shm");
 	return 0;
 }
